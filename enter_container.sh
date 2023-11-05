@@ -1,0 +1,1 @@
+docker exec -it go-sample-crud-api /bin/bash

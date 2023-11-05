@@ -1,0 +1,25 @@
+version: '3'
+services:
+  api:
+    image: golang:1.21.3-bullseye
+    container_name: go-sample-crud-api
+    volumes:
+      - ./app:/go/src/app
+    ports:
+      - "8080:8080"
+    working_dir: /go/src/app
+    command: go run main.go
+    #command: sleep infinity
+
+  mysql:
+    platform: linux/x86_64
+    image: mysql:8.0.35-debian
+    container_name: "go-sample-crud-mysql"
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./create_database.sql:/docker-entrypoint-initdb.d/create_database.sql  
+    ports:
+      - "3306:3306"     
