@@ -5,7 +5,7 @@
 ## Technical test for developing an full api users. this project was developed using containers. in the Golang language, using mysql as a database.
 
 <!--ts-->
-* [Frameworks used](#frameworks_used)
+* [Frameworks used](#frameworks-used)
 * [Prerequisites](#prerequisites)
 * [Cloning repository](#clonning)
 * [Installing](#installing)
