@@ -1,16 +1,26 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://go.dev/" target="_blank"><img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg" width="400"></a></p>
 
 # Register of Users
 
 ## Technical test for developing an full api users. this project was developed using containers. in the Golang language, using mysql as a database.
 
 <!--ts-->
+* [Frameworks used](#frameworks_used)
 * [Prerequisites](#prerequisites)
 * [Cloning repository](#clonning)
 * [Installing](#installing)
 * [Running](#running)
 * [Swagger](#swagger)
 <!--te-->
+
+Frameworks used
+============
+- <a hfef="https://gin-gonic.com" target="_blank">Gin</a>
+- <a hfef="https://github.com/gin-contrib/cors" target="_blank">Gin Cors</a>
+- <a hfef="https://gorm.io/index.html" target="_blank">Gorm</a>
+- <a hfef="https://pkg.go.dev/gopkg.in/validator.v2" target="_blank">Validator v2</a>
+- <a hfef="https://github.com/dgrijalva/jwt-go" target="_blank">JWT</a>
+- <a hfef="https://pkg.go.dev/github.com/joho/godotenv" target="_blank">Godotenv</a>
 
 Prerequisites
 ============
@@ -24,42 +34,24 @@ Cloning repository
 ============
 
 ```bash
-$ git clone git@github.com:raphaelsmend/clientApi.git
+$ git clone git@github.com:raphaelsmend/golang-crud-api.git
 ```
 Installing
 ============
 
 ```bash
-$ cd clientApi
-$ make install
+$ golang-crud-api
+$ docker compose build
 ```
 Running
 ============
 for start all containers
 ```bash
-$ make up
+$ docker compose up
 
-* this command runs the laravel server, do not close the window.
+* this command runs the mysql server and start go server.
 ```
 
-for tests
-```bash
-$ make tests
-```
-
-for restart all containers
-```bash
-$ make restart
-```
-
-for stop all containers
-```bash
-$ make down
-```
-
-Swagger
+Routes Documentetion
 ============
-Swagger with all endpoints
-```bash
-http://localhost:8080
-```
+all routes was made available in Imnsonia file with routes. filename: Insomnia_golang_crud_api.json
